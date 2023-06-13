@@ -1,0 +1,28 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"ApacheConf",
+		"Color Highlight",
+		"DocBlockr",
+		"Emmet",
+		"GitHub Theme",
+		"Package Control",
+		"PHP-Twig",
+		"Phpcs",
+		"PhpNamespace",
+		"Sass",
+		"Schema Validator",
+		"Simple JSX",
+		"SublimeLinter",
+		"SublimeLinter-php",
+		"SublimeLinter-phpcs",
+		"WordPress Gutenburg Blocks Autocompletions",
+		"WordPress Internationalization (i18n)",
+		"WPCS Whitelist Flags",
+		"wpseek WordPress Developer Assistant",
+	],
+}

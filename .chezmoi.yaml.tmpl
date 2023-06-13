@@ -1,0 +1,32 @@
+{{- $is_linux := eq .chezmoi.os "linux" }}
+{{- $is_windows := eq .chezmoi.os "windows" }}
+{{- $is_desktop := eq .chezmoi.hostname "ms-6845" }}
+{{- $is_laptop := contains "fe754" .chezmoi.hostname }}
+{{- $is_devcontainer := or (env "REMOTE_CONTAINERS") (env "CODESPACES") (env "VSCODE_REMOTE_CONTAINERS_SESSION") (env "GITPOD_HOST") | not | not -}}
+
+data:
+  github:
+    name: "Carsten Bach"
+    email: "mail@carsten-bach.de"
+  machine:
+    desktop: {{ $is_desktop }}
+    laptop: {{ $is_laptop }}
+    linux: {{ $is_linux }}
+    windows: {{ $is_windows }}
+    devcontainer: {{ $is_devcontainer }}
+    root: {{ eq .chezmoi.username "root" }}
+  gpg:
+    default_key: main
+    main: C2CFE239922797E8
+    keyserver: hkps://keys.openpgp.org
+    use_agent: false
+    no_autostart: {{ $is_devcontainer }}
+
+verbose: true
+completition:
+  custom: true
+
+edit:
+  command: code
+  args:
+    - '--wait'

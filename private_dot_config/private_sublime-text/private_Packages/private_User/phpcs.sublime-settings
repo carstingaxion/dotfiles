@@ -1,0 +1,146 @@
+{
+
+    // Turn the debug output on/off
+    "show_debug": true,
+
+    // Path to php on windows installation
+    // This is needed as we cannot run phars on windows, so we run it through php
+    "phpcs_php_prefix_path": "C:\\php\\php.exe",
+ 
+    // This is the path to the bat file when we installed PHP_CodeSniffer
+    "phpcs_executable_path": "C:\\php\\phpcs.bat",
+
+
+ 
+    // Options include:
+    // - Sniffer
+    // - Fixer
+    // - MessDetector
+    // - CodeBeautifier
+    //
+    // This will prepend the application with the path to php
+    // Needed for windows, or anyone who doesn't/can't make phars
+    // executable. Avoid setting this if at all possible
+    "phpcs_commands_to_php_prefix": [
+    	"Sniffer", "Fixer", "CodeBeautifier"
+    ],
+
+    // Additional arguments you can specify into the application
+    //
+    // Example:
+    // {
+    //     "--standard": "PEAR",
+    //     "-n"
+    // }    
+    //"phpcs_additional_args": {
+    //    "--standard": "$folder/phpcs.xml.dist",
+    //    // "--standard": "WordPress",
+    //    // "--standard": "PSR2",
+    //    // "-n": ""
+    //},
+    "phpcs_additional_args": {
+        // "--installed_paths": "C:\\Users\\carsten\\Documents\\hub\\SETTINGS\\WordPress-Coding-Standards"
+       // "-n": ""
+       
+       // 
+       // "--generator": "Markdown"
+    },
+
+    // Show the errors in the quick panel so you can then goto line
+    "phpcs_show_quick_panel": true,
+
+
+
+
+
+    // PHP-CS-Fixer settings
+    // Don't want to auto fix issue with php-cs-fixer
+    "php_cs_fixer_on_save": false,
+
+    // Show the quick panel
+    "php_cs_fixer_show_quick_panel": true,
+
+    // The fixer phar file is stored here:
+    "php_cs_fixer_executable_path": "C:\\php\\php-cs-fixer-v3.phar",
+
+    // Additional arguments, run all levels of fixing
+    "php_cs_fixer_additional_args": {
+        // "--rules": "WordPress-Docs",
+        // "--rules": "encoding, short_tag, braces, elseif, eof_ending, function_call_space, function_declaration, indentation, line_after_namespace, linefeed, lowercase_keywords, method_argument_space, multiple_use, parenthesis, php_closing_tag, single_line_after_imports, trailing_spaces, visibility, concat_without_spaces, double_arrow_multiline_whitespaces, duplicate_semicolon, empty_return, extra_empty_lines, include, join_function, multiline_array_trailing_comma, new_with_braces, no_empty_lines_after_phpdocs, object_operator, operators_spaces, phpdoc_align, phpdoc_indent, remove_leading_slash_use, remove_lines_between_uses, return, single_array_no_trailing_comma, spaces_before_semicolon, spaces_cast, standardize_not_equal, ternary_spaces, unused_use, whitespacy_lines, align_double_arrow, concat_with_spaces, multiline_spaces_before_semicolon, ordered_use, short_array_syntax, strict, strict_param"
+        // "--rules": "encoding, elseif, function_declaration, blank_line_after_namespace, lowercase_keywords, method_argument_space, no_closing_tag, single_line_after_imports, include, new_with_braces, no_blank_lines_after_phpdoc, phpdoc_align, phpdoc_indent, space_after_semicolon, standardize_not_equals, concat_space, multiline_whitespace_before_semicolons, array_syntax"
+    },
+
+
+
+
+    // Fix the issues on save
+    "phpcbf_on_save": true,
+
+    // Show the quick panel
+    "phpcbf_show_quick_panel": true,
+
+    // Path to where you have the phpcbf installed
+    "phpcbf_executable_path": "C:\\php\\phpcbf.bat",
+
+    // Additional arguments you can specify into the application
+    //
+    // Example:
+    // {
+    //     "--standard": "PEAR",
+    //     "-n"
+    // }    
+    "phpcbf_additional_args": {
+        // "--standard": "WordPress",
+        // "--standard": "WordPress-Core",
+        "--standard": "WordPress-Docs",
+        // "--standard": "WordPress-Extra",
+        // "--standard": "WordPressVIPMinimum",
+        // "--standard": "WordPress-VIP-Go",
+        // "--standard": "PSR2",
+        
+        //  A comma separated list of sniff codes to include or exclude from fixing
+        // (all sniffs must be part of the specified standard)
+        // "--sniffs": "",
+        
+        //  Do not fix warnings (shortcut for --warning-severity=0)
+        // "-n": ""
+        
+        //  Show sniff codes in all reports
+        "-s": "",
+        
+        //  
+        "--tab-width": "4",
+        
+        //  Print ruleset and token output
+        "-v": "",
+        
+        //  Show progress of the run
+        "-p": ""
+    },
+
+
+
+
+
+    // PHP Linter settings
+    // Yes, lets lint the files
+    "phpcs_linter_run": false,
+
+    // And execute that on each file when saved (php only as per extensions_to_execute)
+    "phpcs_linter_command_on_save": false,
+
+    // Path to php
+    "phpcs_php_path": "C:\\php\\php.exe",
+
+    // This is the regex format of the errors
+    "phpcs_linter_regex": "(?P<message>.*) on line (?P<line>\\d+)",
+
+
+
+
+
+
+
+    // Execute the phpmd on file save
+    "phpmd_command_on_save": false,
+}

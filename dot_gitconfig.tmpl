@@ -1,0 +1,38 @@
+[core]
+{{- if .machine.windows }}
+    eol = lf
+    sshCommand = C:/Program\\ Files/OpenSSH-Win64/ssh.exe
+    symlinks = true
+    autocrlf = false
+{{- else }}
+	autocrlf = input
+{{- end }}
+{{- if .machine.windows }}
+[gpg]
+    program = C:\\Program Files (x86)\\gnupg\\bin\\gpg.exe
+{{- end }}
+[user]
+    name = Carsten Bach
+    email = mail@carsten-bach.de
+    signingkey = {{ get .gpg .gpg.default_key }}
+[alias]
+    {{/* https://stackoverflow.com/a/9726638 */}}
+    cas = commit --amend --date=now -S
+    lg = log --graph --oneline --decorate
+    lga = log --graph --oneline --decorate --all
+    lgs = log --show-signature
+    rbc = rebase --continue
+    rba = rebase --abort
+    cpc = cherry-pick --continue
+    cpa = cherry-pick --abort
+    sbu = submodule update --recursive --init
+[commit]
+    verbose = true
+    gpgsign = true
+[pull]
+    rebase = true
+[push]
+    default = current
+[init]
+    default = main
+

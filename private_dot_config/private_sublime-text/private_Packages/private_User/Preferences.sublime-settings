@@ -1,0 +1,24 @@
+{
+	"always_show_minimap_viewport": true,
+	"default_line_ending": "unix",
+	"ensure_newline_at_eof_on_save": true,
+	"folder_exclude_patterns":
+	[
+		"node_modules"
+	],
+	"font_size": 14,
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+		"SublimeLinter",
+		"Vintage",
+	],
+	"line_padding_bottom": 1,
+	"line_padding_top": 1,
+	"show_line_endings": true,
+	"ui_scale": 1.4,
+	"word_wrap": false,
+	"color_scheme": "Packages/GitHub Theme/schemes/GitHub Dark.sublime-color-scheme",
+	"theme": "GitHub Dark.sublime-theme",
+}

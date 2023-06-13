@@ -1,0 +1,22 @@
+// SublimeLinter Settings - User
+{
+	"linters": {
+        "phpcs": {
+            // "args": "--standard=WordPress-Extra,WordPress-Docs,PHPCompatibilityWP --runtime-set testVersion 7.2- -s",
+            // "standard": "WordPress,WordPress-Extra,WordPress-Docs",
+            // "standard": "WordPress,WordPress-Extra",
+            // "standard": "${folder}/phpcs.xml.dist",
+            "standard": "${project_path}/phpcs.xml.dist",
+            // "standard": "${project_path}/phpcs.xml.dist",
+            //"standard": [
+            //    "$project_path/phpcs.xml.dist",
+            //    "$project/phpcs.xml.dist",
+            //    "WordPress",
+            //    "WordPress-Extra",
+            //],
+            "executable": ["C:\\php\\phpcs.bat"],
+            // "lint_mode": "load_save",
+    		"show_panel_on_save": "view",
+        }
+    }
+}

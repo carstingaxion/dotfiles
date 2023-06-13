@@ -1,0 +1,9 @@
+{
+	"clients":
+	{
+		"phpls":
+		{
+			"enabled": true
+		}
+	}
+}
